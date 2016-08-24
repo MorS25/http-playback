@@ -1,17 +1,18 @@
 {
   "name": "http-playback",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Play-back data over an HTTP streaming interface at the speed of your choice.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/swift-nav/http-playback"
   },
   "bin": {
-    "http-playback": "./http-playback.js"
+    "http-playback": "./lib/http-playback.js"
   },
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha -R spec",
+    "build": "babel src -d lib"
   },
   "keywords": [
     "playback",
@@ -21,6 +22,11 @@
   "author": "Joshua Gross <joshua.gross@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "ecef-projector": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.13.2"
   }
 }
