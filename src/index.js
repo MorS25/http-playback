@@ -14,7 +14,7 @@
 const net = require('net');
 const fs = require('fs');
 const http = require('http');
-const pkg = require('./package.json');
+const pkg = require('../package.json');
 
 /**
  * Start an HTTP file-playback server.
